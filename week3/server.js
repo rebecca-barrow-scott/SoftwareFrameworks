@@ -5,12 +5,12 @@ var http = require('http').Server(app);
 app.use(express.static(__dirname + '/www'));
 
 app.get('/', function(req, res){
-    res.sendFile(__dirname, '/index.html');
+    res.sendFile(__dirname + '/index.html');
 });
 app.post('/', function(req, res){
     var form = new formidable.IncomingForm();
     form.parse(req);
-    res.sendFile(__dirname, '/index.html');
+    res.sendFile(__dirname +'/www/index.html');
 });
 
 let server = http.listen(3000, function () {
@@ -21,5 +21,5 @@ let server = http.listen(3000, function () {
     console.log('Access it here: http://localhost:3000/');
 });
 app.get('/account', function(req, res){
-    res.sendFile(__dirname, '/account.html');
+    res.sendFile(__dirname + '/www/account.html');
 });
