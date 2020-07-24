@@ -2,13 +2,16 @@
     <head>
         <meta charset ="utf8" />
         <title> Simple Upload Example </title>
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
         <h1>Login page</h1>
-        <form action="/" enctype="multipart/form-data" method="post">
-            <label>Email</label>
+        <form id="loginForm">
+            <label for="email">Email</label>
             <input type="text" name="email"><br><br>
-            <label>Password</label>
+            <label for="password">Password</label>
             <input type="text" name="password"><br><br>
             <input type="submit" value="Upload">
         </form>
