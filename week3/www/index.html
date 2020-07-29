@@ -8,13 +8,13 @@
     </head>
     <body>
         <h1>Login page</h1>
-        <form id="loginForm">
+        <form id="loginform">
             <label for="email">Email</label>
-            <input type="text" name="email"><br><br>
+            <input type="text" name="email" id="email"><br><br>
             <label for="password">Password</label>
-            <input type="text" name="password"><br><br>
-            <input type="submit" value="Upload">
+            <input type="text" name="password" id="password"><br><br>
+            <input type="submit" value="Login">
         </form>
-        <button type="button">Account</button>
+        <div id='errormsg' class='hidemessage'>User credentials do not match</div>
     </body>
 </html>

@@ -3,5 +3,9 @@
 }
 
 .fail{
+    display: block;
     background-color: red;
+}
+.hidemessage {
+    display: none;
 }

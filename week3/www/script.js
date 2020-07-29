@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-    $("#loginForm").submit(function(event){
+    $("#loginform").submit(function(event){
         event.preventDefault();
         ajaxPost();
     });
@@ -12,20 +12,25 @@ $( document ).ready(function() {
         $.ajax({
             type : "POST",
             contentType : "application/json",
-            url : window.location + "form",
+            url : window.location + "login/attempt",
             data : JSON.stringify(formData),
             dataType : 'json',
-            success : function(customer){
-                if (customer.valid == true){
-                    $("#loginForm").removeClass("fail");
-                    $("#loginForm").addClass("success");
+            success : function(value){
+                if (value.ok){
+                    $("#loginform").removeClass("fail");
+                    $("#loginform").addClass("success");
+                    $("#errormsg").removeClass("fail");
+                    $("#errormsg").addClass("hidemessage");
                 } else {
-                    $("#loginForm").removeClass("success");
-                    $("#loginForm").addClass("fail");
+                    $("#loginform").removeClass("success");
+                    $("#loginform").addClass("fail");
+                    $("#errormsg").addClass("fail");
+                    $("#errormsg").removeClass("hidemessage");
+
                 }
             },
             error : function(e){
-                alert("Error!")
+                alert("Error");
                 console.log("Error: ", e);
             }
         });
