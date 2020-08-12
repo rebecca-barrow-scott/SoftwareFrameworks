@@ -1,4 +1,5 @@
 .success{
+    display: block;
     background-color: green;
 }
 

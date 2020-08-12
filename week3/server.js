@@ -6,7 +6,7 @@ var path = require('path');
 var app = express();
 var http = require('http').Server(app);
 
-require('./www/account.js')(app, path);
+require('./www/routes/account.js')(app, path);
 app.use(express.static(__dirname + '/www'));
 app.use(bodyParser.json());
 

@@ -21,12 +21,13 @@ $( document ).ready(function() {
                     $("#loginform").addClass("success");
                     $("#errormsg").removeClass("fail");
                     $("#errormsg").addClass("hidemessage");
+                    $('#loginsuccess').html("<p> Login was successful </p>");
                 } else {
                     $("#loginform").removeClass("success");
                     $("#loginform").addClass("fail");
                     $("#errormsg").addClass("fail");
                     $("#errormsg").removeClass("hidemessage");
-
+                    $('#loginsuccess').html("<p> Login was unsuccessful </p>");
                 }
             },
             error : function(e){
