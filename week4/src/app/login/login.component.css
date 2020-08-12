@@ -14,3 +14,10 @@ button:hover, button:active{
     padding: 5px;
     font-size:1.3em;
 }
+
+.ifBlock{
+    color:limegreen;
+}
+.elseBlock{
+    color:red;
+}

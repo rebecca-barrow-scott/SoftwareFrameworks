@@ -1,5 +1,12 @@
 <h1>Login</h1>
 <a class="nav-link" routerLink='/account'>Account</a>
+<div *ngIf='verify; then ifBlock else elseBlock'></div>
+<ng-template #ifBlock>
+  <p class='ifBlock'>{{feedback}}</p>
+</ng-template>
+<ng-template #elseBlock>
+  <p class='elseBlock'>{{feedback}}</p>
+</ng-template>
 
 <form>
     <div class="form-group">

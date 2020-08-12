@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -8,23 +9,28 @@ import { Component, OnInit } from '@angular/core';
 export class LoginComponent implements OnInit {
   email:String = ""
   password:String = ""
+  verify:Boolean = false
+  feedback:String = ""
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
   
   login(){
+    this.verify = false
     var users = [{'email': 'user1@gmail.com', 'password': '123'},
                  {'email': 'user2@gmail.com', 'password': '123'},
                  {'email': 'user3@gmail.com', 'password': '123'}];
     for (var user of users){
       if (user.email == this.email && user.password == this.password){
-        alert('worked');
+        this.verify = true;
+        this.feedback = 'Login Successful';
+        this.router.navigateByUrl('/account');
       }
-      else{
-        alert('Error');
-      }
+    }
+    if (!this.verify){
+      this.feedback = 'Email or password doesn\'t match';
     }
   }
 }
