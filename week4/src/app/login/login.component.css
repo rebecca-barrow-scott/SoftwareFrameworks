@@ -21,3 +21,16 @@ button:hover, button:active{
 .elseBlock{
     color:red;
 }
+
+.success{
+    display: block;
+    background-color: green;
+}
+
+.fail{
+    display: block;
+    background-color: red;
+}
+.hidemessage {
+    display: none;
+}

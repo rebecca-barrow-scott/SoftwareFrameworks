@@ -1,3 +1,10 @@
-<h1>Accounts Page</h1>
-<img src="../../assets/money.jpg">
-<a class="nav-link" routerLink='/login'>Login</a>
+<h1>Account</h1>
+<div *ngIf="username; then TrueBlock">
+</div>
+<ng-template #TrueBlock>
+    <a (click)='logOut()'>Logout</a>
+</ng-template>
+<p><strong>Username: </strong>{{username}}</p>
+<p><strong>Email: </strong>{{email}}</p>
+<p><strong>Birthdate: </strong>{{birthdate}}</p>
+<p><strong>Age: </strong>{{age}}</p>
