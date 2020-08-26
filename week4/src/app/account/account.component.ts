@@ -15,12 +15,8 @@ export class AccountComponent implements OnInit {
 
   ngOnInit(): void {
     if (!this.email){
-      this.router.navigate(['/']);
+      this.router.navigate(['/login']);
     }
-  }
-  logOut(){
-    sessionStorage.clear()
-    this.router.navigate(['/']);
   }
 
 }

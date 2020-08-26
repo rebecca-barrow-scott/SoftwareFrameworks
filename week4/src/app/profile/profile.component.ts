@@ -17,7 +17,7 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit(): void {
     if (!this.email){
-      this.router.navigate(['/']);
+      this.router.navigate(['/login']);
     }
   }
   changeData(){

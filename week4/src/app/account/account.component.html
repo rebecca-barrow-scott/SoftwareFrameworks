@@ -1,9 +1,4 @@
 <h1>Account</h1>
-<div *ngIf="username; then TrueBlock">
-</div>
-<ng-template #TrueBlock>
-    <a (click)='logOut()'>Logout</a>
-</ng-template>
 <p><strong>Username: </strong>{{username}}</p>
 <p><strong>Email: </strong>{{email}}</p>
 <p><strong>Birthdate: </strong>{{birthdate}}</p>
