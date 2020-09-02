@@ -1,0 +1,14 @@
+<h1>Chat</h1>
+<form>
+    <div class="form-group">
+      <label for="exampleInputMessage1">Message</label>
+      <input type="text" name='message' class="form-control" id="exampleInputMessage1"  placeholder="Enter message..." [(ngModel)]="messagecontent">
+    </div>
+    <button type="submit" class="btn btn-primary" value="Login" (click)="chat(messagecontent)">Send</button>
+  </form>
+<ul>
+  <div *ngFor='let message of messages'>
+    <li>{{message}}</li>
+  </div>
+    
+</ul>

@@ -1,0 +1,47 @@
+button{
+    background-color: rgb(120, 187, 184); 
+    border: 2px solid rgb(120, 187, 184);
+    color: black;
+    width: 100%;
+    padding: 5px;
+    font-size:1.3em;
+}
+button:hover, button:active{
+    background-color: rgb(120, 187, 184); 
+    border: 2px solid rgb(91, 158, 155);
+    color: black;
+    width: 100%;
+    padding: 5px;
+    font-size:1.3em;
+}
+
+.ifBlock{
+    color:limegreen;
+}
+.elseBlock{
+    color:red;
+}
+
+.success{
+    display: block;
+    background-color: green;
+}
+
+.fail{
+    display: block;
+    background-color: red;
+}
+.hidemessage {
+    display: none;
+}
+ul{
+    list-style: none;
+    margin-top: 30px;
+    width: 100%;
+    padding: 0;
+    li{
+        width: 100%;
+        border-bottom: 1px solid lightgray;
+        padding: 5px;
+    }
+}
